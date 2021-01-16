@@ -1,9 +1,15 @@
 import './GalleryItem.css'
+import Button from 'react-bootstrap/Button'
 
 function GalleryItem ({photo}) {
 
     return (
-        <img src={photo.path} alt="" className="image"/>
+        <div>
+            <img src={photo.path} alt="" className="image"/>
+            <>
+                <Button variant="primary">Love It!</Button>{' '}
+            </>
+        </div>
     )
 }
 
