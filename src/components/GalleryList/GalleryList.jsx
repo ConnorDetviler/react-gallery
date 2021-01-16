@@ -1,19 +1,19 @@
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 import './GalleryList.css'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+import CardColumns from 'react-bootstrap/CardColumns'
 
 function GalleryList ({photoList}) {
     return (
         <Container>
-            <Row>
+            <CardColumns>
                 {photoList.map((photo) => (
                     <GalleryItem
                         key={photo.id}
                         photo={photo}
                     />
                 ))}
-            </Row>
+            </CardColumns>
         </Container>
     )
 }

@@ -1,15 +1,17 @@
 import './GalleryItem.css'
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 
 function GalleryItem ({photo}) {
 
     return (
-        <div>
-            <img src={photo.path} alt="" className="image"/>
-            <>
-                <Button variant="primary">Love It!</Button>{' '}
-            </>
-        </div>
+        <Card border="dark">
+            <Card.Img variant="top" src={photo.path} className="image"/>
+            <Card.Body>
+                <Button variant="dark" block>Love It!</Button>
+            </Card.Body>
+
+        </Card>
     )
 }
 
