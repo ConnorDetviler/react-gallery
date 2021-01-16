@@ -3,7 +3,7 @@ import './GalleryItem.css'
 function GalleryItem ({photo}) {
 
     return (
-        <p>{photo.id}</p>
+        <img src={photo.path} alt="" className="image"/>
     )
 }
 
