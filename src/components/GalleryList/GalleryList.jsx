@@ -1,9 +1,14 @@
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 import './GalleryList.css'
 
-function GalleryList () {
+function GalleryList ({photoList}) {
     return (
-        <GalleryItem />
+        photoList.map((photo) => (
+            <GalleryItem
+                key={photo.id}
+                photo={photo}
+            />
+        ))
     )
 }
 

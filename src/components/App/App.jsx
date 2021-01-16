@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
+  const [photoList, setPhotoList] = useState([]);
+
   useEffect(() => {
     getPhotos();
   }, []);
@@ -15,6 +17,7 @@ function App() {
     .get('/gallery')
     .then((response) => {
       console.log(response.data);
+      setPhotoList(response.data);
     })
     .catch((err) => {
       console.log(err);
@@ -26,7 +29,9 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList />
+        <GalleryList
+          photoList = {photoList}
+        />
       </div>
     );
 }

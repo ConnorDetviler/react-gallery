@@ -1,8 +1,9 @@
 import './GalleryItem.css'
 
-function GalleryItem () {
+function GalleryItem ({photo}) {
+
     return (
-        <p>hello</p>
+        <p>{photo.id}</p>
     )
 }
 
