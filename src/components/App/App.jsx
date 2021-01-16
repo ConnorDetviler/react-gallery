@@ -24,6 +24,19 @@ function App() {
     });
   }
 
+  const lovePhoto = (id) => {
+    console.log(id);
+    axios
+    .put(`/gallery/like/${id}`)
+    .then((response) => {
+      console.log(response);
+      getPhotos();
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+
     return (
       <div className="App">
         <header className="App-header">
@@ -31,6 +44,7 @@ function App() {
         </header>
         <GalleryList
           photoList = {photoList}
+          lovePhoto = {lovePhoto}
         />
       </div>
     );

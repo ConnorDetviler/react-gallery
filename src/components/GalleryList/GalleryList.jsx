@@ -3,7 +3,7 @@ import './GalleryList.css'
 import Container from 'react-bootstrap/Container'
 import CardColumns from 'react-bootstrap/CardColumns'
 
-function GalleryList ({photoList}) {
+function GalleryList ({photoList, lovePhoto}) {
     return (
         <Container>
             <CardColumns>
@@ -11,6 +11,7 @@ function GalleryList ({photoList}) {
                     <GalleryItem
                         key={photo.id}
                         photo={photo}
+                        lovePhoto={lovePhoto}
                     />
                 ))}
             </CardColumns>
