@@ -1,4 +1,8 @@
-/* .image {
-    min-width: 200px;
-    max-width: 200px;
-} */
+.photo-description {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+.photo-description-body {
+    background-color: rgb(68, 68, 106);
+}

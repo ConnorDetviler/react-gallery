@@ -16,7 +16,7 @@ function App() {
     axios
     .get('/gallery')
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setPhotoList(response.data);
     })
     .catch((err) => {
@@ -25,11 +25,10 @@ function App() {
   }
 
   const lovePhoto = (id) => {
-    console.log(id);
+    // console.log(id);
     axios
     .put(`/gallery/like/${id}`)
     .then((response) => {
-      console.log(response);
       getPhotos();
     })
     .catch((err) => {
