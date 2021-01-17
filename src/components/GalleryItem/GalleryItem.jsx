@@ -23,10 +23,16 @@ function GalleryItem ({photo, lovePhoto}) {
 
     return (
         <Card border="dark">
-            {/* <Card.Img variant="top" src={photo.path} className="image"/> */}
-            <Card.Body onClick={handleClick} className="photo-description-body">
-                <Card.Text className="photo-description">{photo.description}</Card.Text>
-            </Card.Body>
+
+
+            {descriptionVisible ?
+                                    <Card.Body onClick={handleClick} className="photo-description-body">
+                                        <Card.Text className="photo-description">{photo.description}</Card.Text>
+                                    </Card.Body>
+                                :
+                                    <Card.Img onClick={handleClick} variant="top" src={photo.path} className="image"/>
+                                }
+
             <Card.Body>
                 <Button
                     variant="dark"
