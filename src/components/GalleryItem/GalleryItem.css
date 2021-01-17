@@ -1,8 +1,13 @@
+.card {
+    user-select: none;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.317);
+}
+
 .photo-description {
     font-size: 2em;
     color: rgb(255, 255, 255);
 }
 
 .photo-description-body {
-    background-color: rgb(68, 68, 106);
+    background-color: #44446a;
 }

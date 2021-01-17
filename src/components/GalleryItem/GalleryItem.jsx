@@ -22,9 +22,9 @@ function GalleryItem ({photo, lovePhoto}) {
     }
 
     return (
-        <Card border="dark">
+        <Card border="dark" className="card">
 
-
+            {/* conditional rendering to switch between image and description text */}
             {descriptionVisible ?
                                     <Card.Body onClick={handleClick} className="photo-description-body">
                                         <Card.Text className="photo-description">{photo.description}</Card.Text>
@@ -33,13 +33,14 @@ function GalleryItem ({photo, lovePhoto}) {
                                     <Card.Img onClick={handleClick} variant="top" src={photo.path} className="image"/>
                                 }
 
-            <Card.Body>
+            <Card.Body className="lower-card-body">
                 <Button
+                    className="like-button"
                     variant="dark"
                     onClick={handleLove}
                     block
                 >Love It!</Button>
-                <Card.Text>{likeText()}</Card.Text>
+                <Card.Text className="like-text">{likeText()}</Card.Text>
             </Card.Body>
 
         </Card>
